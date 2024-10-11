@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Blog Post</title>
+    <link rel="stylesheet" href="/css/post.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <div class="navbar">
+        <div id="dropdown" class="dropdown">
+            <div class="dropdown-content">
+                <div class="dropdown-header">
+                    <span class="suggestion-label">Vorschläge</span>
+                    <div class="search-container">
+                        <div class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="search-svg-dropdown" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 4a6 6 0 100 12 6 6 0 000-12zm8 8h.01M20 20l-4-4" />
+                            </svg>
+                        </div>
+                        <input
+                            id="searchInput"
+                            type="text"
+                            placeholder="Suche..."
+                            class="search-input"
+                        />
+                    </div>
+                    <button id="closeButton" class="cancel-button">Abbrechen</button>
+                </div>
+                <div id="suggestionsList" class="suggestions-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar-container secondary-bg">
+        <ul class="top-bar">
+            <ul class="social-icons">
+                <li><img src="/images/linkedin.png" alt="linkedin" width="30" height="30"></li>
+                <li><img src="/images/facebook.png" alt="facebook" width="30" height="30"></li>
+                <li><img src="/images/instagram.png" alt="instagram" width="30" height="30"></li>
+                <li><img src="/images/youtube.png" alt="youtube" width="30" height="30"></li>
+            </ul>
+            <li class="logo-container">
+                <h1 class="logo">SIEVENTIC</h1>
+                <p>Alles rund um die Schweiz</p>
+            </li>
+            <li class="search-container" onclick="handleInputClick()">
+                <div class="search-input-container">
+                    <input type="text" id="mainSearchInput" placeholder="Suche..." class="search-input">
+                    <div class="search-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="search-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 4a6 6 0 100 12 6 6 0 000-12zm8 8h.01M20 20l-4-4" />
+                        </svg>
+                    </div>
+                </div>
+            </li>
+        </ul>
+     
+        
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link"><span>Startseite</span></a></li>
+                <li><a href="/blog" class="nav-link"><span>sich informieren</span></a></li>
+                <li><a href="/about" class="nav-link"><span>Über uns</span></a></li>
+                <li><a href="/contact" class="nav-link"><span>Kontaktiere uns</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <article class="blog-article">
+            <h2>Second Blog Post</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas blanditiis iste odio accusantium, quod, sunt distinctio tempore optio illo, sed consectetur maiores praesentium ipsum libero! Quibusdam, maiores mollitia perferendis iste eum distinctio minima eos ad alias voluptates, natus sunt aspernatur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum pariatur error sunt iusto maxime maiores, nemo repudiandae quam nisi! Cum aliquid architecto nam ratione nulla velit, et cupiditate harum corrupti repudiandae vel sapiente? Vitae deserunt recusandae ea deleniti maxime temporibus eum placeat rerum sequi. Officia dolor nostrum accusamus eaque consectetur?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quidem nesciunt sunt quia nostrum ut tempore cum, perferendis sequi similique nemo culpa magnam sed aliquid alias dolorem possimus quos maxime ad saepe iste accusamus amet at nihil? Neque, ab nobis est nostrum maiores itaque quam saepe aliquid qui repellendus dicta doloremque quia impedit, dolore asperiores quo laboriosam eius ipsum commodi architecto et. Quos ut consequuntur laudantium quod doloribus in, modi vero libero temporibus blanditiis ad nostrum corrupti obcaecati. Consectetur accusantium earum repellat error alias ullam eligendi, eum saepe voluptatibus distinctio quibusdam quisquam soluta rerum magni iure! Est nam praesentium quidem?</p>
+        </article>
+        
+        <div class="comment-section">
+            <div class="header">
+                <h1>Post a Comment</h1>
+                <div class="comment-count"><span id="commentCount">0</span> Comments</div>
+            </div>
+            <div id="comments" class="comments"></div>
+            <div class="comment-form">
+                <input type="text" id="nameInput" placeholder="Your Name" class="name-input" />
+                <input type="text" id="commentInput" placeholder="Enter comment" class="comment-input" />
+                <button id="publishButton" class="publish-button" disabled>Publish</button>
+            </div>
+        </div>
+    </main>
+    
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h1 class="footer-title">Sieventic</h1>
+                <p class="footer-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, dignissimos autem? Dolore unde minima, itaque optio atque maxime omnis natus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quibusdam quia animi eius minus expedita.</p>
+            </div>
+            <div class="footer-links">
+                <ul class="footer-nav">
+                    <li><a href="/about" class="footer-nav-link">Über uns</a></li>
+                    <li><a href="/privacy-policy" class="footer-nav-link">Datenschutzrichtlinien</a></li>
+                    <li><a href="/contact" class="footer-nav-link">Kontaktiere uns</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="copyright-text">
+                Copyright ©Yann Hofwil 2024
+            </div>
+        </div>
+    </footer>
+
+    <script src="/javascript/comment.js"></script>
+
+</body>
+</html>

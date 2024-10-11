@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+    <div class="container secondary-bg">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/" class="nav-link"><p><span class="navhover">Startseite</span></p></a></li>
+                <li class="nav-item"><a href="/blog" class="nav-link"><p><span class="navhover">sich informieren</span></p></a></li>
+                <li class="nav-item"><a href="/about" class="nav-link"><p><span class="navhover">Über uns</span></p></a></li>
+                <li class="nav-item"><a href="/contact" class="nav-link"><p><span class="navhover">Kontaktiere uns</span></p></a></li>
+            </ul>
+            <div class="content">
+                <h1 class="main-heading">Swissblog</h1>
+                <p class="subtext">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, possimus?</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="search-container secondary-bg">
+        <div class="search-width">
+            <div class="search-input-container">
+                <input 
+                type="text" 
+                placeholder="Suche Beiträge..." 
+                class="search-input" 
+                onkeyup="handleSearch(event)"
+            />
+            </div>
+            <div class="category-buttons">
+                <div class="category-button" data-category="" >Alles</div>
+                <div class="category-button" data-category="finanzen">Finanzen</div>
+                <div class="category-button" data-category="reisen">Reisen</div>
+                <div class="category-button" data-category="bildung">Bildung</div>
+                <div class="category-button" data-category="politik">Politik</div>
+                <div class="category-button" data-category="weiteres">Weiteres</div>
+            </div>
+        </div>
+    </div>
+
+    <ul id="blog-posts" class="blog-posts"></ul>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h1 class="footer-title">Sieventic</h1>
+                <p class="footer-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, dignissimos autem? Dolore unde minima, itaque optio atque maxime omnis natus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta quibusdam quia animi eius minus expedita.</p>
+            </div>
+            <div class="footer-links">
+                <ul class="footer-nav">
+                    <li><a href="/about" class="footer-nav-link">Über uns</a></li>
+                    <li><a href="/privacy-policy" class="footer-nav-link">Datenschutzrichtlinien</a></li>
+                    <li><a href="/contact" class="footer-nav-link">Kontaktiere uns</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="copyright-text">
+                Copyright ©Yann Hofwil 2024
+            </div>
+        </div>
+    </footer>
+
+    <script src="/javascript/blog.js"></script>
+
+</body>
+</html>
