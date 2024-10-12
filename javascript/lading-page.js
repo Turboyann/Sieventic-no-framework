@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const formattedDate = getFormattedDate(date);
         
         const postElement = document.createElement('li');
-        postElement.className = 'w-full relative pb-10';
+        postElement.className = 'newest-post';
         postElement.innerHTML = `
             <img class="hero-right-image" src="/images/${id}.jpg" alt="image">
             <h1 class="hero-right-small-title">${title}</h1>
-            <p class="post-text-right mb-2.5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="post-text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <a href="/blog/posts/${id}" class="p-1">
                 <button class="button-small">MEHR LESEN</button>
             </a>

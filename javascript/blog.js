@@ -88,13 +88,39 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Add 'active' class to the clicked button
-        clickedButton.classList.add('active');
+        if (clickedButton) {
+            clickedButton.classList.add('active');
+        }
+
+        // Update URL
+        const newUrl = new URL(window.location);
+        newUrl.searchParams.set('category', category);
+        window.history.pushState({}, '', newUrl);
     }
 
     // Function to handle search input
     window.handleSearch = function(event) {
         currentQuery = event.target.value.toLowerCase();
         applyFilters();
+    }
+
+    // Function to get URL parameters
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Check for category parameter in URL
+    const urlCategory = getUrlParameter('category');
+    if (urlCategory) {
+        currentCategory = urlCategory;
+        // Find the button that corresponds to this category and activate it
+        const categoryButton = document.querySelector(`.category-button[data-category="${urlCategory}"]`);
+        if (categoryButton) {
+            handleCategoryClick(urlCategory, categoryButton);
+        }
     }
 
     // Add event listeners to category buttons
